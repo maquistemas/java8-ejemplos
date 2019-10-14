@@ -2,6 +2,8 @@ package pe.com.maquistemas.app;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,6 +41,25 @@ public class Comparar {
 		System.out.println(
 		invoices.stream().collect(Collectors.groupingBy(Invoice::getRecipient)).toString()
 		);
+		
+		
+		/**
+		 * ORDERNAR
+		 */
+		
+		System.out.println(">>>facturas");
+		
+		Comparator<InvoiceItem> compa = (i1, i2) -> i1.getProduct().compareTo(i2.getProduct());
+		
+		invoices.stream().flatMap(invoice->invoice.getItems().stream())
+		.map(invoiceItem->invoiceItem.getProduct().toUpperCase()).distinct()
+		.sorted().forEach(x->System.out.println(x));
+		
+		System.out.println(">>>frutas");
+		List<String> frutas = new ArrayList<>(Arrays.asList("Platano", "Algo", "Algo", "Limon"));
+		frutas.stream().sorted(Comparator.reverseOrder()).distinct().forEach(x->System.out.println(x));
+		
+		
 		
 		
 	}

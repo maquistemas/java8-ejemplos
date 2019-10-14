@@ -1,4 +1,4 @@
-package pe.com.maquistemas.app;
+package pe.com.maquistemas.app.modelo;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

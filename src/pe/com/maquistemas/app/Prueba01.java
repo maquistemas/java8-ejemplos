@@ -3,6 +3,8 @@ package pe.com.maquistemas.app;
 import java.util.IntSummaryStatistics;
 import java.util.stream.Collectors;
 
+import pe.com.maquistemas.app.modelo.Empleado;
+
 public class Prueba01 {
 	
 	

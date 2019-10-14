@@ -1,7 +1,9 @@
-package pe.com.maquistemas.app.modelo;
+package pe.com.maquistemas.app;
 
 import java.math.BigDecimal;
 import java.util.stream.Collectors;
+
+import pe.com.maquistemas.app.modelo.InvoiceDao;
 
 public class Total_Factura_BigDecimal {
 	
